@@ -1047,10 +1047,20 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 20p
     <div class="fcopy">© 2025 CZSK-Memes</div>
   </div>
 </footer>
+<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
 <div class="ts" id="ts"></div>
 
 <script>
 'use strict';
+
+/* ════ KONFIGURACE DATABÁZE ════ */
+const firebaseConfig = {
+  databaseURL: "https://czsk-memes-default-rtdb.europe-west1.firebasedatabase.app/"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
 /* ════ CONSTANTS ════ */
 var ADMIN_PW = 'M14E02M24E';
 
@@ -2145,3 +2155,4 @@ renderGrid();renderCands();updStats();
 </script>
 </body>
 </html>
+
